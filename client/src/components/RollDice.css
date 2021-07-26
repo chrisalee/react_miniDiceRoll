@@ -1,0 +1,24 @@
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  th {
+      height: 2em;
+      border-bottom: 1px solid #000000;
+      text-decoration: underline;
+  }
+
+  td {
+    border: 1px solid #dddddd;
+
+  }
+  
+  td, th {
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
