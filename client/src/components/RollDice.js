@@ -18,6 +18,7 @@ const RollDice = ({ sides }) => {
     const newDie2 = sides[Math.floor(Math.random() * sides.length)];
     const score1 = Object.values(newDie1);
     const score2 = Object.values(newDie2);
+
     setState({
       die1: Object.keys(newDie1),
       die2: Object.keys(newDie2),
@@ -26,8 +27,10 @@ const RollDice = ({ sides }) => {
       averageScore: (score1[0] + score2[0]) / 2,
     });
 
-    // console.log(score1[0]);
-    // console.log(score2[0]);
+    console.log(score1[0]);
+    console.log(Object.keys(newDie1));
+    console.log(Object.values(newDie1));
+
 
     setTimeout(() => {
       setState((prevState) => ({ ...prevState, rolling: false }));
@@ -63,7 +66,7 @@ const RollDice = ({ sides }) => {
             <td>{die2}</td>
             <td>{totalScore}</td>
             <td>{averageScore}</td>
-            <td>{die1 > die2 ? die1 : die2}</td>
+            <td>{die1 > die2 ? roll.newDie1 : die2}</td>
             <td>{die1 > die2 ? die2 : die1}</td>
           </tr>
         </tbody>
